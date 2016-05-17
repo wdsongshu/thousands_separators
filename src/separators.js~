@@ -1,0 +1,14 @@
+function thousands_separators(num) {
+   /* var integerArray = [];
+    var smallNumberArray = [];*/
+    var numArray = num.split(".");
+
+    numArray[0] = numArray[0].slice(0,-3) + ',' + numArray[0].slice(-3,0);
+    if(parseInt(numArray[1]) === 0)
+    {
+        return numArray[0];
+    }else{
+        return numArray[0]+'.'+numArray[1];
+    }
+}
+module.exports = thousands_separators;
